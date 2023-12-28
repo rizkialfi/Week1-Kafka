@@ -161,9 +161,52 @@ Restart=on-abnormal
 ![image](https://github.com/rizkialfi/Week1-Kafka/assets/25836490/8024c5be-ee4e-49c6-be40-210cae9f199e)
 
 
+
+
 24. Jika bertuliskan Active dan berwarna hijau tandanya sudah selesai dan sudah berjalan
 25. Pastikan anda menjalankan pada TIAP VM Kalian yang sudah kalian buat tadi sesuai cara diatas
 
+
+
+
+Tutorial Selanjutnya Cara Membuat Topic dan Membuat Event : 
+
+![image](https://github.com/rizkialfi/Week1-Kafka/assets/25836490/830b0f30-246c-4a71-8f3b-df082c4bc9b0)
+
+1. Sebagai gambaran diatas saya coba membuat topic ```topik-percobaan```
+Here is the command  :
+```bash
+> /home/kafka/kafka_baru/bin/kafka-topics.sh --create --topic topik-percobaan --bootstrap-server localhost:9092 #topik-percobaan adalah nama topik yang akan kita buat, kita bisa mengubahnya juga
+
+```
+
+
+2. Setelah itu kita bisa check untuk topic yang telah buat dengan cara describe the topic dengan Command :
+```bash
+> /home/kafka/kafka_baru/bin/kafka-topics.sh --describe --topic topik-percobaan --bootstrap-server 172.18.46.46:9092
+```
+
+Berikut Hasil nya : 
+![image](https://github.com/rizkialfi/Week1-Kafka/assets/25836490/8da7b438-7cfd-4783-80b0-21860ec0eb0b)
+
+4. Jika sudah mengecek topic yang sudah dibuat, kita bisa menambahkan sebuah event kedalam topic, dengan cara :
+```bash
+> /home/kafka/kafka_baru/bin/kafka-console-producer.sh --topic new-topic --bootstrap-server 172.18.46.46:9092
+
+#Pada Command Diatas kita menggunakan script bash produce untuk membuat topicnya
+#Untuk Cek Event pada step selanjutnya kita akan menggunakan script consumer
+```
+![image](https://github.com/rizkialfi/Week1-Kafka/assets/25836490/3463b90c-70a2-4f06-ab55-0d5e3c6c1947)
+
+4. Sekarang saatnya check event yang sudah kita tambahkan kedalam topic dengan menggunakan script consumer dengan cara :
+```bash
+> /home/kafka/kafka_baru/bin/kafka-console-consumer.sh --topic new-topic --from-beginning --bootstrap-server 172.18.46.46:9092
+```
+6. Berikut kemudian hasil nya :
+![image](https://github.com/rizkialfi/Week1-Kafka/assets/25836490/95a31956-d787-4ffe-b9af-1989acd010e7)
+
+
+Terakhir kalian bisa melakukan ```CTRL + C``` setelah menambahkan atau cek event yang sudah ditambahkan :)
 
 
 
