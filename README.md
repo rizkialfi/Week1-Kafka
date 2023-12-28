@@ -165,7 +165,5 @@ Restart=on-abnormal
 25. Pastikan anda menjalankan pada TIAP VM Kalian yang sudah kalian buat tadi sesuai cara diatas
 
 
-Kemudiana Step dibawah ini adalah untuk membuat Topic dan Event pada Kafka
-
 
 
